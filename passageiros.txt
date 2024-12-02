@@ -1,0 +1,10 @@
+1|Lucas|Rua 1|12341234|1|0
+2|Mariana|Rua 2|98765432|0|0
+3|João|Rua 3|56473829|1|10
+4|Ana|Rua 4|67890543|1|20
+5|Carlos|Rua 5|99887766|0|0
+6|Beatriz|Rua 6|87654321|1|30
+7|Ricardo|Rua 7|12345678|1|40
+8|Sofia|Rua 8|11223344|0|0
+9|Fernando|Rua 9|22334455|1|50
+10|Gabriela|Rua 10|33445566|1|60

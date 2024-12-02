@@ -1,0 +1,10 @@
+1|Trip1|12341234|Piloto
+2|Trip2|12341234|Copiloto
+3|Trip3|12341234|Comissario
+4|Trip4|12345678|Piloto
+5|Trip5|87654321|Copiloto
+6|Trip6|11223344|Comissario
+7|Trip7|22334455|Piloto
+8|Trip8|33445566|Copiloto
+9|Trip9|44556677|Comissario
+10|Trip10|55667788|Piloto

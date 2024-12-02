@@ -1,3 +1,8 @@
+### ** SUJESTÃO DE USO**
+Baixe todo repositorio e o extraia no replit.com 
+https://replit.com/~
+O uso dessa plataforma padroniza o sistema evitando erros de maquina para maquina
+
 # Descrição Geral
 O Sistema de Gerenciamento de Voos é um software desenvolvido para a companhia aérea Voo Seguro. 
 Ele organiza e gerencia as operações relacionadas a passageiros, tripulação, voos, assentos e reservas,
