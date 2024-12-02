@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Declaração das funções (supondo que estejam implementadas)
+// Declaração das funções (implementações são assumidas)
 void cadastrarPassageiro();
 void listarPassageiros();
 void cadastrarTripulacao();
@@ -11,29 +11,18 @@ void listarVoos();
 void gerenciarAssentos();
 void criarReserva();
 void baixaReserva();
-void pesquisarPassageiroOuTripulacao();
 void listarVoosPassageiro();
 void consultarFidelidade();
 
-int main() {
+// Função para exibir o submenu Passageiro
+void menuPassageiro() {
     int opcao;
-
     do {
-        printf("\n--- Sistema de Gerenciamento de Voos ---\n");
+        printf("\n--- Menu Passageiro ---\n");
         printf("1. Cadastrar Passageiro\n");
         printf("2. Listar Passageiros\n");
-        printf("3. Cadastrar Tripulação\n");
-        printf("4. Listar Tripulação\n");
-        printf("5. Cadastrar Voo\n");
-        printf("6. Listar Voos\n");
-        printf("7. Gerenciar Assentos\n");
-        printf("8. Criar Reserva\n");
-        printf("9. Baixa em Reserva\n");
-        printf("10. Pesquisa (Passageiros/Tripulação)\n");
-        printf("11. Listar Voos de um Passageiro\n");
-        printf("12. Consultar Programa de Fidelidade\n");
-        printf("13. Sair\n");
-        printf("\nEscolha uma opção: ");
+        printf("3. Voltar\n");
+        printf("Escolha uma opção: ");
         scanf("%d", &opcao);
 
         switch (opcao) {
@@ -44,42 +33,137 @@ int main() {
                 listarPassageiros();
                 break;
             case 3:
+                printf("Voltando ao menu principal...\n");
+                break;
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+        }
+    } while (opcao != 3);
+}
+
+// Função para exibir o submenu Tripulação
+void menuTripulacao() {
+    int opcao;
+    do {
+        printf("\n--- Menu Tripulação ---\n");
+        printf("1. Cadastrar Tripulação\n");
+        printf("2. Listar Tripulação\n");
+        printf("3. Voltar\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
                 cadastrarTripulacao();
                 break;
-            case 4:
+            case 2:
                 listarTripulacao();
                 break;
-            case 5:
+            case 3:
+                printf("Voltando ao menu principal...\n");
+                break;
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+        }
+    } while (opcao != 3);
+}
+
+// Função para exibir o submenu Voo
+void menuVoo() {
+    int opcao;
+    do {
+        printf("\n--- Menu Voo ---\n");
+        printf("1. Cadastrar Voo\n");
+        printf("2. Listar Voos\n");
+        printf("3. Voltar\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
                 cadastrarVoo();
                 break;
-            case 6:
+            case 2:
                 listarVoos();
                 break;
-            case 7:
+            case 3:
+                printf("Voltando ao menu principal...\n");
+                break;
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+        }
+    } while (opcao != 3);
+}
+
+// Função principal com o menu principal
+int main() {
+    int opcao;
+
+    do {
+        printf("\n--- Sistema de Gerenciamento de Voos ---\n");
+        printf("1. Menu Passageiro\n");
+        printf("2. Menu Tripulação\n");
+        printf("3. Menu Voo\n");
+        printf("4. Gerenciar Assentos\n");
+        printf("5. Reservas\n");
+        printf("6. Listar Voos de um Passageiro\n");
+        printf("7. Consultar Programa de Fidelidade\n");
+        printf("8. Sair\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                menuPassageiro();
+                break;
+            case 2:
+                menuTripulacao();
+                break;
+            case 3:
+                menuVoo();
+                break;
+            case 4:
                 gerenciarAssentos();
                 break;
-            case 8:
-                criarReserva();
+            case 5: {
+                int subopcao;
+                do {
+                    printf("\n--- Menu Reservas ---\n");
+                    printf("1. Criar Reserva\n");
+                    printf("2. Baixar Reserva\n");
+                    printf("3. Voltar\n");
+                    printf("Escolha uma opção: ");
+                    scanf("%d", &subopcao);
+
+                    switch (subopcao) {
+                        case 1:
+                            criarReserva();
+                            break;
+                        case 2:
+                            baixaReserva();
+                            break;
+                        case 3:
+                            printf("Voltando ao menu principal...\n");
+                            break;
+                        default:
+                            printf("Opção inválida! Tente novamente.\n");
+                    }
+                } while (subopcao != 3);
                 break;
-            case 9:
-                baixaReserva();
-                break;
-            case 10:
-                pesquisarPassageiroOuTripulacao();
-                break;
-            case 11:
+            }
+            case 6:
                 listarVoosPassageiro();
                 break;
-            case 12:
+            case 7:
                 consultarFidelidade();
                 break;
-            case 13:
+            case 8:
                 printf("Encerrando o sistema. Até logo!\n");
                 break;
             default:
                 printf("Opção inválida! Tente novamente.\n");
         }
-    } while (opcao != 13);
+    } while (opcao != 8);
 
     return 0;
 }
