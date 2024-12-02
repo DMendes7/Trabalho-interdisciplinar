@@ -1,9 +1,5 @@
 # **Casos de Teste - Sistema de Gerenciamento de Voos**
 
-Este documento descreve os casos de teste do **Sistema de Gerenciamento de Voos**. Cada teste cobre uma funcionalidade específica para verificar a conformidade com os requisitos.
-
----
-
 ## **Casos de Teste**
 
 ### **Caso de Teste 1: Cadastro de Passageiro**
